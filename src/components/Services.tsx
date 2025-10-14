@@ -43,7 +43,7 @@ export function Services() {
   ];
 
   return (
-    <section id="servicios" className="section-container bg-[#F5F0EA]">
+    <section id="servicios" className="section-container bg-[#F5F0EA] overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-[#4A2329] mb-6 text-center">
           Nuestros Servicios: Soluciones Integrales para la Victoria

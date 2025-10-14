@@ -30,18 +30,57 @@ export function Method() {
   ];
 
   return (
-    <section id="metodo" className="section-container bg-white">
+    <section id="metodo" className="section-container bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-[#4A2329] mb-6 text-center">
           Nuestro Método: La Ruta Científica hacia el Éxito
         </h1>
 
-        <p className="text-lg text-gray-700 leading-relaxed mb-16 text-center max-w-4xl mx-auto">
+        <p className="text-lg text-gray-700 leading-relaxed mb-12 md:mb-16 text-center max-w-4xl mx-auto">
           En Bulé, no trabajamos con suposiciones. Nuestro método es una fórmula comprobada que garantiza la alineación estratégica, la ejecución precisa y la optimización constante, siempre bajo el más estricto secreto profesional.
         </p>
 
-        <div className="relative">
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#4A2329] via-[#A65656] to-[#8B4848] transform -translate-x-1/2"></div>
+        {/* Mobile Layout */}
+        <div className="md:hidden space-y-6">
+          {steps.map((step, index) => {
+            const Icon = step.icon;
+            const isLast = index === steps.length - 1;
+
+            return (
+              <div key={index} className="relative flex gap-4">
+                {/* Stepper column */}
+                <div className="flex flex-col items-center flex-shrink-0">
+                  {/* Icon circle */}
+                  <div className="w-14 h-14 rounded-full bg-[#A65656] text-white flex items-center justify-center shadow-lg z-10">
+                    <Icon className="w-7 h-7" />
+                  </div>
+                  {/* Connecting line */}
+                  {!isLast && (
+                    <div className="w-0.5 flex-1 bg-gradient-to-b from-[#A65656] to-[#8B4848] mt-2"></div>
+                  )}
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 pb-6 min-w-0">
+                  <div className="bg-white border-2 border-[#4A2329]/20 rounded-lg p-4 shadow-md hover:shadow-lg transition hover:border-[#A65656]">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-full bg-[#4A2329] text-white flex items-center justify-center text-xl font-bold flex-shrink-0">
+                        {step.number}
+                      </div>
+                      <h3 className="text-sm font-bold text-[#4A2329] leading-tight">{step.title}</h3>
+                    </div>
+                    <p className="text-sm text-gray-700 leading-relaxed">{step.description}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden md:block relative">
+          {/* Línea vertical central */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#4A2329] via-[#A65656] to-[#8B4848] transform -translate-x-1/2"></div>
 
           <div className="space-y-12">
             {steps.map((step, index) => {
@@ -49,8 +88,14 @@ export function Method() {
               const isEven = index % 2 === 0;
 
               return (
-                <div key={index} className={`relative flex items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                  <div className={`w-full md:w-5/12 ${isEven ? 'md:pr-8' : 'md:pl-8'}`}>
+                <div key={index} className={`relative flex items-center ${isEven ? 'flex-row' : 'flex-row-reverse'}`}>
+                  {/* Ícono circular central */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center w-16 h-16 rounded-full bg-[#A65656] text-white shadow-lg z-10">
+                    <Icon className="w-8 h-8" />
+                  </div>
+
+                  {/* Card */}
+                  <div className={`w-5/12 ${isEven ? 'pr-8' : 'pl-8'}`}>
                     <Card className="border-2 border-[#4A2329]/20 hover:shadow-xl transition hover:border-[#A65656]">
                       <CardContent className="p-6">
                         <div className="flex items-start gap-4">
@@ -71,11 +116,8 @@ export function Method() {
                     </Card>
                   </div>
 
-                  <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-[#A65656] text-white items-center justify-center shadow-lg z-10">
-                    <Icon className="w-8 h-8" />
-                  </div>
-
-                  <div className="hidden md:block w-5/12"></div>
+                  {/* Espaciador */}
+                  <div className="w-5/12"></div>
                 </div>
               );
             })}

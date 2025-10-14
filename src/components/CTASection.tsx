@@ -6,7 +6,7 @@ export function CTASection() {
   };
 
   return (
-    <section className="section-container bg-gradient-to-r from-[#4A2329] to-[#A65656] text-white text-center">
+    <section className="section-container bg-gradient-to-r from-[#4A2329] to-[#A65656] text-white text-center overflow-hidden">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold mb-6">
           ¿Listo para llevar tu militancia al dominio digital?

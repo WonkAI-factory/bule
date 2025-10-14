@@ -26,7 +26,7 @@ export function About() {
   ];
 
   return (
-    <section id="quienes-somos" className="section-container bg-white">
+    <section id="quienes-somos" className="section-container bg-white overflow-hidden">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-[#4A2329] mb-8 text-center">
           Bulé Consultora: La Nueva Política Digital
@@ -50,7 +50,7 @@ export function About() {
             El Equipo Bulé: Expertise Multidisciplinaria
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {teamRoles.map((role, index) => {
               const Icon = role.icon;
               return (

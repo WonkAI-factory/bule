@@ -40,7 +40,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contacto" className="section-container bg-[#4A2329] text-white">
+    <section id="contacto" className="section-container bg-[#4A2329] text-white overflow-hidden">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
           Conversemos. Transforma tu Campaña.
@@ -50,12 +50,12 @@ export function Contact() {
           El éxito político requiere estrategia, data y la mejor ejecución digital. Le invitamos a ponerse en contacto con nuestro equipo para una consulta inicial confidencial. Estamos listos para llevar su militancia al dominio digital.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <Card className="bg-white/10 border-white/20 hover:bg-white/15 transition">
             <CardContent className="p-6 text-center">
               <Mail className="w-8 h-8 text-[#A65656] mx-auto mb-3" />
               <p className="text-sm text-gray-300 mb-1">Email</p>
-              <a href="mailto:contacto@buleconsultora.com" className="text-white hover:text-[#A65656] transition">
+              <a href="mailto:contacto@buleconsultora.com" className="text-white hover:text-[#A65656] transition break-all">
                 contacto@buleconsultora.com
               </a>
             </CardContent>
@@ -85,7 +85,7 @@ export function Contact() {
         <Card className="bg-white/5 border-white/20">
           <CardContent className="p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <Label htmlFor="nombre" className="text-white">Nombre Completo *</Label>
                   <Input

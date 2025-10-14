@@ -36,7 +36,7 @@ export function Hero() {
             En la política actual, la base se construye en la calle y se amplifica en la red. Bulé Consultora es la firma especializada en trasladar el pulso de la militancia territorial al entorno digital, transformando la participación orgánica en campañas de alto impacto y resultados medibles.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:bg-white/15 transition">
               <TrendingUp className="w-12 h-12 text-[#A65656] mx-auto mb-4" />
               <h3 className="text-xl font-bold mb-2">ENFOQUE DATA-DRIVEN</h3>

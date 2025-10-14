@@ -10,9 +10,9 @@ import { Toaster } from "@/components/ui/toaster";
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden w-full">
       <Navigation />
-      <main id="inicio">
+      <main id="inicio" className="overflow-x-hidden w-full">
         <Hero />
         <About />
         <Services />
