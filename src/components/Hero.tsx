@@ -16,7 +16,7 @@ export function Hero() {
             BULÉ CONSULTORA
           </h1>
           <p className="text-2xl md:text-4xl font-semibold text-[#A65656] mb-8">
-            Tu militancia territorial, nuestro éxito digital.
+           Nuestra estrategia, tu éxito.
           </p>
         </div>
 

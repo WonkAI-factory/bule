@@ -15,7 +15,7 @@ export function Footer() {
           <div>
             <h3 className="text-2xl font-bold mb-4 text-[#A65656]">BULÉ</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Tu militancia territorial, nuestro éxito digital.
+           Nuestra estrategia, tu éxito.
             </p>
           </div>
 
