@@ -12,7 +12,7 @@ export function CTASection() {
           ¿Listo para llevar tu militancia al dominio digital?
         </h2>
         <p className="text-xl mb-8 text-gray-100 leading-relaxed">
-          Unimos el pulso de la calle con la precisión digital. Es momento de transformar tu campaña.
+          Conectamos la realidad de la gente con las herramientas digitales. Es momento de hacer que tu campaña hable el idioma de la gente.
         </p>
         <Button
           size="lg"

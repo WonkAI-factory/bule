@@ -33,7 +33,7 @@ export function Method() {
     <section id="metodo" className="section-container bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-[#4A2329] mb-6 text-center">
-          Nuestro Método: La Ruta Científica hacia el Éxito
+          Nuestro Método: La Ruta hacia el Éxito
         </h1>
 
         <p className="text-lg text-gray-700 leading-relaxed mb-12 md:mb-16 text-center max-w-4xl mx-auto">

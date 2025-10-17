@@ -3,15 +3,17 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 export function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToSection = (id: string) => {
@@ -24,27 +26,31 @@ export function Navigation() {
 
   const navLinks = [
     { id: "inicio", label: "Inicio" },
-    { id: "quienes-somos", label: "Quiénes Somos" },
-    { id: "servicios", label: "Servicios" },
-    { id: "metodo", label: "Nuestro Método" },
+    { id: "propuesta", label: "Nuestra Propuesta" },
     { id: "contacto", label: "Contacto" }
   ];
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-[#4A2329] shadow-lg"
-          : "bg-gradient-to-b from-black/50 to-transparent"
-      }`}
-    >
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'backdrop-blur-md bg-white/70 shadow-lg border-b border-[#4A2329]/10' 
+        : 'backdrop-blur-sm bg-white/10'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <button
             onClick={() => scrollToSection("inicio")}
-            className="text-2xl font-bold text-white hover:text-[#A65656] transition"
+            className="flex items-center gap-3 hover:opacity-80 transition"
           >
-            BULÉ
+            <div className={`bg-white rounded-full p-2 shadow-md transition-all duration-300 ${
+              isScrolled ? 'shadow-lg' : 'shadow-md'
+            }`}>
+              <img 
+                src="/logo.png" 
+                alt="BULÉ Logo" 
+                className="h-12 w-auto"
+              />
+            </div>
           </button>
 
           <div className="hidden md:flex items-center gap-8">
@@ -52,7 +58,11 @@ export function Navigation() {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-white hover:text-[#A65656] transition font-medium"
+                className={`transition font-medium ${
+                  isScrolled 
+                    ? 'text-[#4A2329] hover:text-[#A65656] border-b-2 border-transparent hover:border-[#A65656] pb-1' 
+                    : 'text-[#4A2329] hover:text-[#A65656] border-b-2 border-transparent hover:border-[#A65656] pb-1'
+                }`}
               >
                 {link.label}
               </button>
@@ -62,7 +72,9 @@ export function Navigation() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden text-white"
+            className={`md:hidden transition ${
+              isScrolled ? 'text-[#4A2329]' : 'text-[#4A2329]'
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -71,13 +83,13 @@ export function Navigation() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-[#4A2329] border-t border-white/20">
+        <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-[#4A2329]/10">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="block w-full text-left text-white hover:text-[#A65656] transition py-2 font-medium"
+                className="block w-full text-left text-[#4A2329] hover:text-[#A65656] transition py-2 font-medium border-b border-transparent hover:border-[#A65656]"
               >
                 {link.label}
               </button>

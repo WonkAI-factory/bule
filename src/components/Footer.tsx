@@ -32,26 +32,18 @@ export function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("quienes-somos")}
+                  onClick={() => scrollToSection("propuesta")}
                   className="text-gray-300 hover:text-[#A65656] transition text-sm"
                 >
-                  Quiénes Somos
+                  Nuestra Propuesta
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection("servicios")}
+                  onClick={() => scrollToSection("contacto")}
                   className="text-gray-300 hover:text-[#A65656] transition text-sm"
                 >
-                  Servicios
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("metodo")}
-                  className="text-gray-300 hover:text-[#A65656] transition text-sm"
-                >
-                  Nuestro Método
+                  Contacto
                 </button>
               </li>
             </ul>
@@ -78,8 +70,8 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2 text-sm">
                 <Phone className="w-4 h-4 text-[#A65656]" />
-                <a href="tel:+54XXXXXXXXXX" className="text-gray-300 hover:text-[#A65656] transition">
-                  +54 XXXXXXXXXX
+                <a href="https://wa.me/5491130487843" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#A65656] transition">
+                  +54 9 1130487843
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm">

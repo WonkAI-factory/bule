@@ -41,7 +41,7 @@ export function About() {
             Nuestra Filosofía: Pasión, Ciencia y Vocación
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed text-center">
-            Nuestro equipo combina la pasión por la política con un enfoque riguroso de cientificismo y datos. Esto nos permite diseñar campañas que no solo resuenan con el electorado, sino que se optimizan en tiempo real para la victoria. Trabajamos con el pulso de la calle y la precisión de la analítica.
+            Nuestro equipo combina la pasión por la política con un enfoque riguroso de cientificismo y datos. Esto nos permite diseñar campañas que no solo resuenan con el electorado, sino que se optimizan en tiempo real para alcanzar los objetivos. Trabajamos con la realidad territorial y la precisión de la analítica.
           </p>
         </div>
 

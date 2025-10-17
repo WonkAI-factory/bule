@@ -46,7 +46,7 @@ export function Services() {
     <section id="servicios" className="section-container bg-[#F5F0EA] overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-[#4A2329] mb-6 text-center">
-          Nuestros Servicios: Soluciones Integrales para la Victoria
+          Nuestros Servicios: Soluciones Integrales para el Éxito
         </h1>
 
         <p className="text-lg text-gray-700 leading-relaxed mb-16 text-center max-w-4xl mx-auto">
