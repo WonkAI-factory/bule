@@ -24,9 +24,7 @@ export function Navigation() {
 
   const navLinks = [
     { id: "inicio", label: "Inicio" },
-    { id: "quienes-somos", label: "Quiénes Somos" },
-    { id: "servicios", label: "Servicios" },
-    { id: "metodo", label: "Nuestro Método" },
+    { id: "propuesta", label: "Nuestra Propuesta" },
     { id: "contacto", label: "Contacto" }
   ];
 

@@ -65,8 +65,8 @@ export function Contact() {
             <CardContent className="p-6 text-center">
               <Phone className="w-8 h-8 text-[#A65656] mx-auto mb-3" />
               <p className="text-sm text-gray-300 mb-1">Teléfono</p>
-              <a href="tel:+54XXXXXXXXXX" className="text-white hover:text-[#A65656] transition">
-                +54 XXXXXXXXXX
+              <a href="https://wa.me/5491130487843" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#A65656] transition">
+                +54 9 1130487843
               </a>
             </CardContent>
           </Card>
@@ -84,7 +84,7 @@ export function Contact() {
 
         <Card className="bg-white/5 border-white/20">
           <CardContent className="p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form className="space-y-6" action="https://formsubmit.co/valenzalazar3@gmail.com" method="POST">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <Label htmlFor="nombre" className="text-white">Nombre Completo *</Label>
@@ -92,8 +92,7 @@ export function Contact() {
                     id="nombre"
                     type="text"
                     required
-                    value={formData.nombre}
-                    onChange={(e) => handleChange("nombre", e.target.value)}
+                    name="nombre"
                     className="bg-white/10 border-white/30 text-white placeholder:text-gray-400"
                     placeholder="Juan Pérez"
                   />
@@ -105,8 +104,7 @@ export function Contact() {
                     id="telefono"
                     type="tel"
                     required
-                    value={formData.telefono}
-                    onChange={(e) => handleChange("telefono", e.target.value)}
+                    name="telefono"
                     className="bg-white/10 border-white/30 text-white placeholder:text-gray-400"
                     placeholder="+54 11 1234-5678"
                   />
@@ -119,8 +117,7 @@ export function Contact() {
                   id="email"
                   type="email"
                   required
-                  value={formData.email}
-                  onChange={(e) => handleChange("email", e.target.value)}
+                  name="email"
                   className="bg-white/10 border-white/30 text-white placeholder:text-gray-400"
                   placeholder="juan@ejemplo.com"
                 />
@@ -129,6 +126,7 @@ export function Contact() {
               <div>
                 <Label htmlFor="interes" className="text-white">Interés *</Label>
                 <Select value={formData.interes} onValueChange={(value) => handleChange("interes", value)} required>
+                  <input type="hidden" name="interes" value={formData.interes} />
                   <SelectTrigger className="bg-white/10 border-white/30 text-white">
                     <SelectValue placeholder="Seleccione una opción" />
                   </SelectTrigger>
@@ -146,8 +144,7 @@ export function Contact() {
                 <Textarea
                   id="mensaje"
                   required
-                  value={formData.mensaje}
-                  onChange={(e) => handleChange("mensaje", e.target.value)}
+                  name="mensaje"
                   className="bg-white/10 border-white/30 text-white placeholder:text-gray-400 min-h-32"
                   placeholder="Cuéntenos sobre su campaña y sus necesidades..."
                 />
@@ -164,6 +161,9 @@ export function Contact() {
               <p className="text-sm text-gray-400 text-center">
                 Garantizamos máxima discreción y el uso exclusivo de la información para fines de contacto.
               </p>
+              <input type="hidden" name="_next" value="http://localhost:5173/"/>
+              <input type="hidden" name="_captcha" value="false"/>
+              <input type="hidden" name="_subject" value="Nuevo mensaje desde el formulario de Bulé!"/>
             </form>
           </CardContent>
         </Card>
