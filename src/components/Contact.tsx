@@ -5,11 +5,9 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent } from "@/components/ui/card";
-import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, Instagram } from "lucide-react";
 
 export function Contact() {
-  const { toast } = useToast();
   const [formData, setFormData] = useState({
     nombre: "",
     telefono: "",
@@ -17,23 +15,6 @@ export function Contact() {
     interes: "",
     mensaje: ""
   });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    toast({
-      title: "Solicitud Enviada",
-      description: "Nos pondremos en contacto con usted a la brevedad. Gracias por su confianza.",
-    });
-
-    setFormData({
-      nombre: "",
-      telefono: "",
-      email: "",
-      interes: "",
-      mensaje: ""
-    });
-  };
 
   const handleChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
