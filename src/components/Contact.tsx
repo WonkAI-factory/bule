@@ -7,25 +7,53 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, Instagram } from "lucide-react";
 
+interface StatusState {
+  ok: boolean;
+  text: string;
+}
+
+interface PayloadData {
+  nonce: string;
+  recaptchaToken: string;
+  name: string;
+  email: string;
+  phone: string;
+  interests: string;
+  message: string;
+}
+
+interface ApiResponse {
+  ok: boolean;
+  error?: string;
+}
+
+declare global {
+  interface Window {
+    grecaptcha: {
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
+
 const SITE_KEY = '6LcJ-O0rAAAAAIq3IdPWrrvTtRC16PSARSmLlfmF';
 const WEBAPP_URL = 'https://rapid-bread-0675.wonkai-factory.workers.dev';
 const NONCE_ENDPOINT = `${WEBAPP_URL}?action=nonce`;
 
 export function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [interests, setInterests] = useState('');
-  const [message, setMessage] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState(null);
+  const [name, setName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [phone, setPhone] = useState<string>('');
+  const [interests, setInterests] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
+  const [status, setStatus] = useState<StatusState | null>(null);
 
-  function showStatus(ok, text){
+  function showStatus(ok: boolean, text: string): void {
     setStatus({ ok, text });
     setTimeout(() => setStatus(null), 6000);
   }
 
-  async function getNonce(){
+  async function getNonce(): Promise<string> {
     const res = await fetch(NONCE_ENDPOINT, { method:'GET', cache:'no-store' });
     if(!res.ok) throw new Error('No se pudo obtener nonce');
     const j = await res.json();
@@ -33,7 +61,7 @@ export function Contact() {
     return j.nonce;
   }
 
-  async function sendPayload(payload){
+  async function sendPayload(payload: PayloadData): Promise<ApiResponse> {
     const res = await fetch(WEBAPP_URL, {
       method:'POST',
       headers:{ 'Content-Type':'application/json' },
@@ -42,7 +70,7 @@ export function Contact() {
     return res.json();
   }
 
-  async function handleSubmit(e){
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>): Promise<void> {
     e.preventDefault();
     setStatus(null);
 
@@ -86,7 +114,8 @@ export function Contact() {
       }
     } catch (err) {
       console.error(err);
-      showStatus(false, 'Error en el envío: ' + (err.message || err));
+      const errorMessage = err instanceof Error ? err.message : String(err);
+      showStatus(false, 'Error en el envío: ' + errorMessage);
     } finally {
       setLoading(false);
     }
