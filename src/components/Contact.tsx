@@ -7,18 +7,91 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, Instagram } from "lucide-react";
 
-export function Contact() {
-  const [formData, setFormData] = useState({
-    nombre: "",
-    telefono: "",
-    email: "",
-    interes: "",
-    mensaje: ""
-  });
+const SITE_KEY = '6LcJ-O0rAAAAAIq3IdPWrrvTtRC16PSARSmLlfmF';
+const WEBAPP_URL = 'https://rapid-bread-0675.wonkai-factory.workers.dev';
+const NONCE_ENDPOINT = `${WEBAPP_URL}?action=nonce`;
 
-  const handleChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-  };
+export function Contact() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [interests, setInterests] = useState('');
+  const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(null);
+
+  function showStatus(ok, text){
+    setStatus({ ok, text });
+    setTimeout(() => setStatus(null), 6000);
+  }
+
+  async function getNonce(){
+    const res = await fetch(NONCE_ENDPOINT, { method:'GET', cache:'no-store' });
+    if(!res.ok) throw new Error('No se pudo obtener nonce');
+    const j = await res.json();
+    if(!j.ok || !j.nonce) throw new Error('Nonce inválido');
+    return j.nonce;
+  }
+
+  async function sendPayload(payload){
+    const res = await fetch(WEBAPP_URL, {
+      method:'POST',
+      headers:{ 'Content-Type':'application/json' },
+      body: JSON.stringify(payload)
+    });
+    return res.json();
+  }
+
+  async function handleSubmit(e){
+    e.preventDefault();
+    setStatus(null);
+
+    if (!message.trim() || (!email.trim() && !name.trim())) {
+      showStatus(false, 'Completá al menos mensaje y nombre o email.');
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const nonce = await getNonce();
+
+      if (typeof window.grecaptcha === 'undefined') {
+        throw new Error('reCAPTCHA no cargado. Agregá el script en public/index.html');
+      }
+      const recaptchaToken = await window.grecaptcha.execute(SITE_KEY, { action: 'submit' });
+
+      const payload = {
+        nonce,
+        recaptchaToken,
+        name: name.trim(),
+        email: email.trim(),
+        phone: phone.trim(),
+        interests: interests.trim(),
+        message: message.trim()
+      };
+
+      const result = await sendPayload(payload);
+
+      if (result && result.ok) {
+        showStatus(true, '¡Mensaje enviado exitosamente! Te contactaré pronto.');
+        setName(''); 
+        setEmail(''); 
+        setPhone('');
+        setInterests('');
+        setMessage('');
+      } else {
+        console.error('Server reply:', result);
+        const err = result && result.error ? result.error : 'error_desconocido';
+        showStatus(false, 'No se pudo enviar: ' + err);
+      }
+    } catch (err) {
+      console.error(err);
+      showStatus(false, 'Error en el envío: ' + (err.message || err));
+    } finally {
+      setLoading(false);
+    }
+  }
+
 
   return (
     <section id="contacto" className="section-container bg-[#4A2329] text-white overflow-hidden">
@@ -65,27 +138,31 @@ export function Contact() {
 
         <Card className="bg-white/5 border-white/20">
           <CardContent className="p-8">
-            <form className="space-y-6" action="https://formsubmit.co/valenzalazar3@gmail.com" method="POST">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <Label htmlFor="nombre" className="text-white">Nombre Completo *</Label>
+                  <Label htmlFor="name" className="text-white">Nombre Completo *</Label>
                   <Input
-                    id="nombre"
+                    id="name"
                     type="text"
                     required
-                    name="nombre"
+                    name="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     className="bg-white/10 border-white/30 text-white placeholder:text-gray-400"
                     placeholder="Juan Pérez"
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="telefono" className="text-white">Teléfono *</Label>
+                  <Label htmlFor="phone" className="text-white">Teléfono *</Label>
                   <Input
-                    id="telefono"
+                    id="phone"
                     type="tel"
                     required
-                    name="telefono"
+                    name="phone"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
                     className="bg-white/10 border-white/30 text-white placeholder:text-gray-400"
                     placeholder="+54 11 1234-5678"
                   />
@@ -99,15 +176,16 @@ export function Contact() {
                   type="email"
                   required
                   name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="bg-white/10 border-white/30 text-white placeholder:text-gray-400"
                   placeholder="juan@ejemplo.com"
                 />
               </div>
 
               <div>
-                <Label htmlFor="interes" className="text-white">Interés *</Label>
-                <Select value={formData.interes} onValueChange={(value) => handleChange("interes", value)} required>
-                  <input type="hidden" name="interes" value={formData.interes} />
+                <Label htmlFor="interests" className="text-white">Interés *</Label>
+                <Select value={interests} onValueChange={(value) => setInterests(value)} required>
                   <SelectTrigger className="bg-white/10 border-white/30 text-white">
                     <SelectValue placeholder="Seleccione una opción" />
                   </SelectTrigger>
@@ -121,11 +199,13 @@ export function Contact() {
               </div>
 
               <div>
-                <Label htmlFor="mensaje" className="text-white">Mensaje *</Label>
+                <Label htmlFor="message" className="text-white">Mensaje *</Label>
                 <Textarea
-                  id="mensaje"
+                  id="message"
                   required
-                  name="mensaje"
+                  name="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   className="bg-white/10 border-white/30 text-white placeholder:text-gray-400 min-h-32"
                   placeholder="Cuéntenos sobre su campaña y sus necesidades..."
                 />
@@ -133,21 +213,42 @@ export function Contact() {
 
               <Button
                 type="submit"
+                disabled={loading}
                 size="lg"
                 className="w-full bg-[#A65656] hover:bg-[#8B4848] text-white text-lg py-6"
               >
-                SOLICITAR ASESORÍA CONFIDENCIAL
+                {loading ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <div className="w-5 h-5 border-2 border-[#1a1a1a] border-t-transparent rounded-full animate-spin"></div>
+                    Enviando...
+                  </span>
+                ) : (
+                  'SOLICITAR ASESORÍA CONFIDENCIAL'
+                )}
               </Button>
+
+              {status && (
+                <div className={`
+                  mt-6 p-4 rounded-xl text-center font-medium
+                  ${status.ok 
+                    ? 'bg-green-50 text-green-700 border border-green-200' 
+                    : 'bg-red-50 text-red-700 border border-red-200'
+                  }
+                `}>
+                  {status.text}
+                </div>
+              )}
 
               <p className="text-sm text-gray-400 text-center">
                 Garantizamos máxima discreción y el uso exclusivo de la información para fines de contacto.
               </p>
-              <input type="hidden" name="_next" value="http://localhost:5173/"/>
-              <input type="hidden" name="_captcha" value="false"/>
-              <input type="hidden" name="_subject" value="Nuevo mensaje desde el formulario de Bulé!"/>
+              <p className="text-xs text-center text-gray-400">
+                🔒 Protegido por reCAPTCHA v3 - Envío seguro garantizado
+              </p>
             </form>
           </CardContent>
         </Card>
+
       </div>
     </section>
   );
