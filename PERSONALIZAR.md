@@ -8,7 +8,7 @@ Para personalizar los datos de contacto en la landing page, edita los siguientes
 **Archivo:** `src/components/Contact.tsx`
 
 Busca y reemplaza:
-- Email: `contacto@buleconsultora.com`
+- Email: `buleconsultora@gmail.com`
 - Teléfono: `+54 XXXXXXXXXX`
 - Instagram: `@buleconsultora` y `https://instagram.com/buleconsultora`
 
@@ -16,7 +16,7 @@ Busca y reemplaza:
 **Archivo:** `src/components/Footer.tsx`
 
 Busca y reemplaza los mismos datos:
-- Email: `contacto@buleconsultora.com`
+- Email: `buleconsultora@gmail.com`
 - Teléfono: `+54 XXXXXXXXXX`
 - Instagram: `@buleconsultora` y `https://instagram.com/buleconsultora`
 

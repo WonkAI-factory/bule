@@ -138,8 +138,8 @@ export function Contact() {
             <CardContent className="p-6 text-center">
               <Mail className="w-8 h-8 text-[#A65656] mx-auto mb-3" />
               <p className="text-sm text-gray-300 mb-1">Email</p>
-              <a href="mailto:contacto@buleconsultora.com" className="text-white hover:text-[#A65656] transition break-all">
-                contacto@buleconsultora.com
+              <a href="mailto:buleconsultora@gmail.com" className="text-white hover:text-[#A65656] transition break-all">
+                buleconsultora@gmail.com
               </a>
             </CardContent>
           </Card>

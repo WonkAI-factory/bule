@@ -64,8 +64,8 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm">
                 <Mail className="w-4 h-4 text-[#A65656]" />
-                <a href="mailto:contacto@buleconsultora.com" className="text-gray-300 hover:text-[#A65656] transition break-all">
-                  contacto@buleconsultora.com
+                <a href="mailto:buleconsultora@gmail.com" className="text-gray-300 hover:text-[#A65656] transition break-all">
+                  buleconsultora@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm">
