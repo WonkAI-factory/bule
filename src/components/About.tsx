@@ -28,7 +28,7 @@ export function About() {
   return (
     <section id="quienes-somos" className="section-container bg-white overflow-hidden">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#4A2329] mb-8 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold text-[#521A1F] mb-8 text-center">
           Bulé Consultora: La Nueva Política Digital
         </h1>
 
@@ -37,7 +37,7 @@ export function About() {
         </p>
 
         <div className="my-16">
-          <h2 className="text-3xl font-bold text-[#4A2329] mb-6 text-center">
+          <h2 className="text-3xl font-bold text-[#521A1F] mb-6 text-center">
             Nuestra Filosofía: Pasión, Ciencia y Vocación
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed text-center">
@@ -46,7 +46,7 @@ export function About() {
         </div>
 
         <div className="my-16">
-          <h2 className="text-3xl font-bold text-[#4A2329] mb-10 text-center">
+          <h2 className="text-3xl font-bold text-[#521A1F] mb-10 text-center">
             El Equipo Bulé: Expertise Multidisciplinaria
           </h2>
 
@@ -54,10 +54,10 @@ export function About() {
             {teamRoles.map((role, index) => {
               const Icon = role.icon;
               return (
-                <Card key={index} className="border-[#4A2329]/20 hover:shadow-lg transition hover:border-[#A65656]">
+                <Card key={index} className="border-[#521A1F]/20 hover:shadow-lg transition hover:border-[#6B2026]">
                   <CardContent className="p-6">
-                    <Icon className="w-10 h-10 text-[#A65656] mb-4" />
-                    <h3 className="text-xl font-bold text-[#4A2329] mb-3">{role.title}</h3>
+                    <Icon className="w-10 h-10 text-[#521A1F] mb-4" />
+                    <h3 className="text-xl font-bold text-[#521A1F] mb-3">{role.title}</h3>
                     <p className="text-gray-600 leading-relaxed">{role.description}</p>
                   </CardContent>
                 </Card>
@@ -66,8 +66,8 @@ export function About() {
           </div>
         </div>
 
-        <blockquote className="border-l-4 border-[#A65656] pl-6 py-4 my-12 bg-[#F5F0EA] rounded-r-lg">
-          <p className="text-xl italic text-[#4A2329] font-medium">
+        <blockquote className="border-l-4 border-[#521A1F] pl-6 py-4 my-12 bg-[#F6F2E9] rounded-r-lg">
+          <p className="text-xl italic text-[#521A1F] font-medium">
             "Garantizamos que cada decisión esté fundamentada en datos, tendencias y análisis político."
           </p>
         </blockquote>

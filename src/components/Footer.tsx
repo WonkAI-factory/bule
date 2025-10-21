@@ -13,7 +13,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-[#A65656]">BULÉ</h3>
+            <h3 className="text-2xl font-bold mb-4 text-[#F6F2E9]">BULÉ</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
            Nuestra estrategia, tu éxito.
             </p>
@@ -25,7 +25,7 @@ export function Footer() {
               <li>
                 <button
                   onClick={() => scrollToSection("inicio")}
-                  className="text-gray-300 hover:text-[#A65656] transition text-sm"
+                  className="text-gray-300 hover:text-[#F6F2E9] transition text-sm"
                 >
                   Inicio
                 </button>
@@ -33,7 +33,7 @@ export function Footer() {
               <li>
                 <button
                   onClick={() => scrollToSection("propuesta")}
-                  className="text-gray-300 hover:text-[#A65656] transition text-sm"
+                  className="text-gray-300 hover:text-[#F6F2E9] transition text-sm"
                 >
                   Nuestra Propuesta
                 </button>
@@ -41,7 +41,7 @@ export function Footer() {
               <li>
                 <button
                   onClick={() => scrollToSection("contacto")}
-                  className="text-gray-300 hover:text-[#A65656] transition text-sm"
+                  className="text-gray-300 hover:text-[#F6F2E9] transition text-sm"
                 >
                   Contacto
                 </button>
@@ -63,20 +63,20 @@ export function Footer() {
             <h4 className="font-bold mb-4">Contacto</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm">
-                <Mail className="w-4 h-4 text-[#A65656]" />
-                <a href="mailto:buleconsultora@gmail.com" className="text-gray-300 hover:text-[#A65656] transition break-all">
+                <Mail className="w-4 h-4 text-[#F6F2E9]" />
+                <a href="mailto:buleconsultora@gmail.com" className="text-gray-300 hover:text-[#F6F2E9] transition break-all">
                   buleconsultora@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm">
-                <Phone className="w-4 h-4 text-[#A65656]" />
-                <a href="https://wa.me/5491130487843" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#A65656] transition">
+                <Phone className="w-4 h-4 text-[#F6F2E9]" />
+                <a href="https://wa.me/5491130487843" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#F6F2E9] transition">
                   +54 9 1130487843
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm">
-                <Instagram className="w-4 h-4 text-[#A65656]" />
-                <a href="https://instagram.com/buleconsultora" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#A65656] transition">
+                <Instagram className="w-4 h-4 text-[#F6F2E9]" />
+                <a href="https://instagram.com/buleconsultora" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#F6F2E9] transition">
                   @buleconsultora
                 </a>
               </li>

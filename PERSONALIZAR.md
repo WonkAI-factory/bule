@@ -23,8 +23,8 @@ Busca y reemplaza los mismos datos:
 ## Colores de la Marca
 
 Los colores están definidos en `src/index.css`:
-- **Color Primario Oscuro:** `#4A2329` (hsl: 0 40% 30%)
-- **Color Secundario/Acento:** `#A65656` (hsl: 0 25% 42%)
+- **Color Primario Oscuro:** `#521A1F` (hsl: 354 48% 22%)
+- **Color Secundario/Acento:** `#F6F2E9` (hsl: 38 37% 94%)
 - **Color Fondo Claro:** `#F5F0EA` (hsl: 39 23% 95%)
 - **Color Gris:** `#C8C6C6` (hsl: 0 2% 78%)
 

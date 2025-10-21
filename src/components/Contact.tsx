@@ -121,9 +121,8 @@ export function Contact() {
     }
   }
 
-
   return (
-    <section id="contacto" className="section-container bg-[#4A2329] text-white overflow-hidden">
+    <section id="contacto" className="section-container bg-[#521A1F] text-white overflow-hidden">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
           Conversemos. Transforma tu Campaña.
@@ -136,9 +135,9 @@ export function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <Card className="bg-white/10 border-white/20 hover:bg-white/15 transition">
             <CardContent className="p-6 text-center">
-              <Mail className="w-8 h-8 text-[#A65656] mx-auto mb-3" />
+              <Mail className="w-8 h-8 text-[#F6F2E9] mx-auto mb-3" />
               <p className="text-sm text-gray-300 mb-1">Email</p>
-              <a href="mailto:buleconsultora@gmail.com" className="text-white hover:text-[#A65656] transition break-all">
+              <a href="mailto:buleconsultora@gmail.com" className="text-white hover:text-[#F6F2E9] transition break-all">
                 buleconsultora@gmail.com
               </a>
             </CardContent>
@@ -146,9 +145,9 @@ export function Contact() {
 
           <Card className="bg-white/10 border-white/20 hover:bg-white/15 transition">
             <CardContent className="p-6 text-center">
-              <Phone className="w-8 h-8 text-[#A65656] mx-auto mb-3" />
+              <Phone className="w-8 h-8 text-[#F6F2E9] mx-auto mb-3" />
               <p className="text-sm text-gray-300 mb-1">Teléfono</p>
-              <a href="https://wa.me/5491130487843" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#A65656] transition">
+              <a href="https://wa.me/5491130487843" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#F6F2E9] transition">
                 +54 9 1130487843
               </a>
             </CardContent>
@@ -156,9 +155,9 @@ export function Contact() {
 
           <Card className="bg-white/10 border-white/20 hover:bg-white/15 transition">
             <CardContent className="p-6 text-center">
-              <Instagram className="w-8 h-8 text-[#A65656] mx-auto mb-3" />
+              <Instagram className="w-8 h-8 text-[#F6F2E9] mx-auto mb-3" />
               <p className="text-sm text-gray-300 mb-1">Instagram</p>
-              <a href="https://instagram.com/buleconsultora" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#A65656] transition">
+              <a href="https://instagram.com/buleconsultora" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#F6F2E9] transition">
                 @buleconsultora
               </a>
             </CardContent>
@@ -244,11 +243,11 @@ export function Contact() {
                 type="submit"
                 disabled={loading}
                 size="lg"
-                className="w-full bg-[#A65656] hover:bg-[#8B4848] text-white text-lg py-6"
+                className="w-full bg-[#F6F2E9] hover:bg-white text-[#521A1F] text-lg py-6"
               >
                 {loading ? (
                   <span className="flex items-center justify-center gap-2">
-                    <div className="w-5 h-5 border-2 border-[#1a1a1a] border-t-transparent rounded-full animate-spin"></div>
+                    <div className="w-5 h-5 border-2 border-[#521A1F] border-t-transparent rounded-full animate-spin"></div>
                     Enviando...
                   </span>
                 ) : (

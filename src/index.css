@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    --background: 39 23% 95%;
-    --foreground: 0 17% 20%;
+    --background: 38 37% 94%;
+    --foreground: 354 48% 22%;
     --card: 0 0% 100%;
-    --card-foreground: 0 17% 20%;
+    --card-foreground: 354 48% 22%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 17% 20%;
-    --primary: 0 40% 30%;
-    --primary-foreground: 39 23% 95%;
-    --secondary: 0 25% 42%;
-    --secondary-foreground: 39 23% 95%;
-    --muted: 0 0% 85%;
-    --muted-foreground: 0 0% 45%;
-    --accent: 0 25% 42%;
-    --accent-foreground: 39 23% 95%;
+    --popover-foreground: 354 48% 22%;
+    --primary: 354 48% 22%;
+    --primary-foreground: 38 37% 94%;
+    --secondary: 354 30% 35%;
+    --secondary-foreground: 38 37% 94%;
+    --muted: 38 20% 85%;
+    --muted-foreground: 354 10% 45%;
+    --accent: 354 30% 35%;
+    --accent-foreground: 38 37% 94%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 40% 30%;
+    --border: 354 15% 80%;
+    --input: 354 15% 80%;
+    --ring: 354 48% 22%;
     --radius: 0.5rem;
   }
 }
@@ -52,5 +52,23 @@
 @layer components {
   .section-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+  
+  /* Animación bounce suave personalizada */
+  .animate-gentle-bounce {
+    animation: gentle-bounce 9s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  @keyframes gentle-bounce {
+    0%, 100% { 
+      transform: translateY(0px);
+      animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    50% { 
+      transform: translateY(-4px);
+      animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
   }
 }

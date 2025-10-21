@@ -6,7 +6,7 @@ export function Services() {
     {
       icon: Briefcase,
       title: "I. ESTRATEGIA POLÍTICA Y GESTIÓN",
-      color: "bg-[#4A2329]",
+      color: "bg-[#521A1F]",
       items: [
         "Estrategia de Campaña y Posicionamiento Competitivo",
         "Diagnóstico situacional y medición de la opinión pública",
@@ -19,7 +19,7 @@ export function Services() {
     {
       icon: Megaphone,
       title: "II. COMUNICACIÓN DIGITAL, REDES Y CONTENIDO",
-      color: "bg-[#A65656]",
+      color: "bg-[#521A1F]",
       items: [
         "Manejo Profesional de Redes Sociales (Engagement y gestión de comunidad)",
         "Estrategias de prensa, relaciones con medios y seguimiento mediático 360",
@@ -31,7 +31,7 @@ export function Services() {
     {
       icon: TrendingUp,
       title: "III. MARKETING ELECTORAL Y ANÁLISIS DE DATOS (SEO FOCUSED)",
-      color: "bg-[#8B4848]",
+      color: "bg-[#521A1F]",
       items: [
         "Planificación e implementación de campañas 100% SEO y Targeting",
         "Asesoría en diseño, alojamiento y marketing electoral web",
@@ -45,7 +45,7 @@ export function Services() {
   return (
     <section id="servicios" className="section-container bg-[#F5F0EA] overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#4A2329] mb-6 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold text-[#521A1F] mb-6 text-center">
           Nuestros Servicios: Soluciones Integrales para el Éxito
         </h1>
 
@@ -57,7 +57,7 @@ export function Services() {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Card key={index} className="overflow-hidden border-2 border-[#4A2329]/20 hover:shadow-xl transition">
+              <Card key={index} className="overflow-hidden border-2 border-[#521A1F]/20 hover:shadow-xl transition">
                 <CardHeader className={`${service.color} text-white`}>
                   <div className="flex items-center gap-4">
                     <Icon className="w-8 h-8" />
@@ -68,7 +68,7 @@ export function Services() {
                   <ul className="space-y-3">
                     {service.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start gap-3">
-                        <span className="text-[#A65656] text-xl mt-1">•</span>
+                        <span className="text-[#521A1F] text-xl mt-1">•</span>
                         <span className="text-gray-700 leading-relaxed">{item}</span>
                       </li>
                     ))}

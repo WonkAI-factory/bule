@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="min-h-screen overflow-x-hidden w-full">
       <Navigation />
-      <main id="inicio" className="overflow-x-hidden w-full">
+      <main id="inicio" className="overflow-x-hidden w-full bg-[#F6F2E9]">
         <Hero />
         <TabsSection />
         <CTASection />
