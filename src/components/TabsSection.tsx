@@ -116,7 +116,7 @@ export function TabsSection() {
   return (
     <section
       id="propuesta"
-      className="section-container bg-[#F5F0EA] overflow-hidden"
+      className="section-container bg-[#F6F2E9] overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
@@ -133,19 +133,19 @@ export function TabsSection() {
           <TabsList className="grid w-full grid-cols-3 mb-8 bg-white/80 border border-[#4A2329]/20">
             <TabsTrigger
               value="servicios"
-              className="text-sm md:text-base font-medium transition-all duration-200 data-[state=active]:bg-[#4A2329] data-[state=active]:text-white data-[state=active]:shadow-md data-[state=inactive]:text-[#4A2329] data-[state=inactive]:hover:bg-[#4A2329]/10"
+              className="text-sm md:text-base font-medium transition-all duration-200 data-[state=active]:bg-[#521A1F] data-[state=active]:text-[#F6F2E9] data-[state=active]:shadow-md data-[state=inactive]:text-[#521A1F] data-[state=inactive]:hover:bg-[#521A1F]/10"
             >
               Servicios
             </TabsTrigger>
             <TabsTrigger
               value="equipo"
-              className="text-sm md:text-base font-medium transition-all duration-200 data-[state=active]:bg-[#4A2329] data-[state=active]:text-white data-[state=active]:shadow-md data-[state=inactive]:text-[#4A2329] data-[state=inactive]:hover:bg-[#4A2329]/10"
+              className="text-sm md:text-base font-medium transition-all duration-200 data-[state=active]:bg-[#521A1F] data-[state=active]:text-[#F6F2E9] data-[state=active]:shadow-md data-[state=inactive]:text-[#521A1F] data-[state=inactive]:hover:bg-[#521A1F]/10"
             >
               Nuestro Equipo
             </TabsTrigger>
             <TabsTrigger
               value="metodo"
-              className="text-sm md:text-base font-medium transition-all duration-200 data-[state=active]:bg-[#4A2329] data-[state=active]:text-white data-[state=active]:shadow-md data-[state=inactive]:text-[#4A2329] data-[state=inactive]:hover:bg-[#4A2329]/10"
+              className="text-sm md:text-base font-medium transition-all duration-200 data-[state=active]:bg-[#521A1F] data-[state=active]:text-[#F6F2E9] data-[state=active]:shadow-md data-[state=inactive]:text-[#521A1F] data-[state=inactive]:hover:bg-[#4A2329]/10"
             >
               Nuestro Método
             </TabsTrigger>
@@ -301,7 +301,7 @@ export function TabsSection() {
             {/* Desktop Layout */}
             <div className="hidden md:block relative">
               {/* Línea vertical central */}
-              <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#4A2329] via-[#A65656] to-[#8B4848] transform -translate-x-1/2"></div>
+              <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-[#A65656] transform -translate-x-1/2"></div>
 
               <div className="space-y-12">
                 {steps.map((step, index) => {
@@ -316,17 +316,17 @@ export function TabsSection() {
                       }`}
                     >
                       {/* Ícono circular central */}
-                      <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center w-16 h-16 rounded-full bg-[#A65656] text-white shadow-lg z-10">
+                      <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center w-16 h-16 rounded-full bg-[#521A1F] text-[#F6F2E9] shadow-lg z-10">
                         <Icon className="w-8 h-8" />
                       </div>
 
                       {/* Card */}
                       <div className={`w-5/12 ${isEven ? "pr-8" : "pl-8"}`}>
-                        <Card className="border-2 border-[#4A2329]/20 hover:shadow-xl transition hover:border-[#A65656]">
+                        <Card className="border-2 border-[#521A1F]/20 hover:shadow-xl transition hover:border-[#A65656]">
                           <CardContent className="p-6">
                             <div className="flex items-start gap-4">
                               <div className="flex-shrink-0">
-                                <div className="w-12 h-12 rounded-full bg-[#4A2329] text-white flex items-center justify-center text-2xl font-bold">
+                                <div className="w-12 h-12 rounded-full bg-[#521A1F] text-[#F6F2E9] flex items-center justify-center text-2xl font-bold">
                                   {step.number}
                                 </div>
                               </div>

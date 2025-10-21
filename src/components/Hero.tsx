@@ -6,7 +6,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-gray-100 to-slate-200">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#F6F2E9]">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzRBMjMyOSIgc3Ryb2tlLW9wYWNpdHk9IjAuMDgiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-20"></div>
 
       <div className="section-container relative z-10 text-center text-[#4A2329]">
@@ -22,7 +22,7 @@ export function Hero() {
         <Button
           size="lg"
           onClick={scrollToContact}
-          className="bg-[#A65656] hover:bg-[#8B4848] text-white text-lg px-8 py-6 rounded-lg shadow-2xl transform transition hover:scale-105 mb-16"
+          className="bg-[#521A1F] hover:bg-[#A65656] text-[#F6F2E9] text-lg px-8 py-6 rounded-lg shadow-2xl transform transition hover:scale-105 mb-16"
         >
           TRANSFORMA TU CAMPAÑA
         </Button>

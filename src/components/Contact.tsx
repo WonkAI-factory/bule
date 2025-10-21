@@ -121,7 +121,6 @@ export function Contact() {
     }
   }
 
-
   return (
     <section id="contacto" className="section-container bg-[#4A2329] text-white overflow-hidden">
       <div className="max-w-5xl mx-auto">
