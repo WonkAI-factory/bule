@@ -26,7 +26,7 @@ export function About() {
   ];
 
   return (
-    <section id="quienes-somos" className="section-container bg-white overflow-hidden">
+    <section id="quienes-somos" className="section-container bg-white overflow-hidden" aria-labelledby="about-heading">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-[#521A1F] mb-8 text-center">
           Bulé Consultora: La Nueva Política Digital

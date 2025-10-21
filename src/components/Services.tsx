@@ -43,7 +43,7 @@ export function Services() {
   ];
 
   return (
-    <section id="servicios" className="section-container bg-[#F5F0EA] overflow-hidden">
+    <section id="servicios" className="section-container bg-[#F5F0EA] overflow-hidden" aria-labelledby="servicios-heading">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-[#521A1F] mb-6 text-center">
           Nuestros Servicios: Soluciones Integrales para el Éxito

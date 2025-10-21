@@ -16,18 +16,18 @@ export function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#F6F2E9]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#F6F2E9]" aria-label="Sección principal">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzUyMUExRiIgc3Ryb2tlLW9wYWNpdHk9IjAuMDUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
 
       <div className="section-container relative z-10 text-center text-[#521A1F]">
-        <div className="mb-8 animate-fade-in">
+        <header className="mb-8 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
             BULÉ CONSULTORA
           </h1>
-          <p className="text-2xl md:text-4xl font-semibold text-[#6B2026] mb-8">
+          <h2 className="text-2xl md:text-4xl font-semibold text-[#6B2026] mb-8">
            Nuestra estrategia, tu éxito.
-          </p>
-        </div>
+          </h2>
+        </header>
 
         <Button
           size="lg"
@@ -37,11 +37,11 @@ export function Hero() {
           TRANSFORMA TU CAMPAÑA
         </Button>
 
-        <div className="mt-16">
+        <article className="mt-16">
           <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-gray-600 mb-8">
             <strong className="text-[#521A1F]">Tu campaña necesita conectar con la gente real.</strong> Nosotros llevamos tu mensaje desde las calles hasta las redes sociales, con estrategia que funciona.
           </p>
-        </div>
+        </article>
       </div>
 
       {/* Flecha flotante suave */}

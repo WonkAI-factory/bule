@@ -1,0 +1,44 @@
+{
+  "name": "Bulé Consultora - Consultoría Política Argentina",
+  "short_name": "Bulé Consultora",
+  "description": "Firma de consultoría política especializada en estrategia electoral, comunicación política y marketing digital en Argentina",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F6F2E9",
+  "theme_color": "#521A1F",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "political", "consulting"],
+  "lang": "es-AR",
+  "dir": "ltr",
+  "scope": "/",
+  "shortcuts": [
+    {
+      "name": "Servicios",
+      "short_name": "Servicios",
+      "description": "Ver nuestros servicios de consultoría política",
+      "url": "/#servicios",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Contacto",
+      "short_name": "Contacto",
+      "description": "Contactar a Bulé Consultora",
+      "url": "/#contacto",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
