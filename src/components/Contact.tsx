@@ -122,7 +122,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contacto" className="section-container bg-[#521A1F] text-white overflow-hidden">
+    <section id="contacto" className="section-container bg-[#521A1F] text-white overflow-hidden" aria-labelledby="contact-heading">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
           Conversemos. Transforma tu Campaña.

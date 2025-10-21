@@ -1,0 +1,93 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es Bulé Consultora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bulé Consultora es una firma de consultoría política especializada en estrategia electoral, comunicación política y marketing digital en Argentina. Ayudamos a candidatos y líderes políticos a diseñar y ejecutar campañas electorales exitosas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué servicios ofrece Bulé Consultora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ofrecemos tres líneas principales de servicio: 1) Estrategia Política y Gestión de Campañas, 2) Comunicación Digital y Gestión de Redes Sociales, y 3) Marketing Electoral y Análisis de Datos con SEO y targeting avanzado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde opera Bulé Consultora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bulé Consultora trabaja principalmente en Argentina, ofreciendo servicios de consultoría política a candidatos, partidos políticos y organizaciones en todo el país."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo puede ayudarme Bulé con mi campaña electoral?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nuestro método incluye 4 pasos: Diagnóstico Estratégico, Mapeo del Electorado, Estrategia 360 y Ejecución con Optimización continua. Combinamos análisis de datos, comunicación digital y estrategia territorial para maximizar tus posibilidades de éxito electoral."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta contratar los servicios de consultoría política?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los servicios de Bulé Consultora son modulares y personalizados según las necesidades de cada campaña. Ofrecemos una consulta inicial confidencial gratuita para evaluar tu proyecto y proponer un plan a medida. Contactanos para más información."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Bulé Consultora maneja redes sociales para políticos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, ofrecemos manejo profesional de redes sociales con estrategias de engagement, gestión de comunidad, producción de contenido y diseño de piezas publicitarias para Instagram, Facebook, Twitter y otras plataformas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el marketing electoral digital?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El marketing electoral digital incluye todas las estrategias online para ganar elecciones: SEO político, campañas en redes sociales, email marketing, targeting de votantes, analítica web y gestión de reputación online. En Bulé somos especialistas en estas técnicas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo contacto a Bulé Consultora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puedes contactarnos por email a buleconsultora@gmail.com, por WhatsApp al +54 9 11 3048-7843, o a través de nuestro Instagram @buleconsultora. También puedes completar el formulario de contacto en nuestra web."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Marketing Electoral en Argentina: Guía Completa 2025",
+      "description": "Descubre las mejores estrategias de marketing electoral y consultoría política para ganar elecciones en Argentina.",
+      "author": {
+        "@type": "Organization",
+        "name": "Bulé Consultora"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Bulé Consultora",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://consultorabule.com.ar/logo.png"
+        }
+      },
+      "datePublished": "2025-10-21",
+      "dateModified": "2025-10-21"
+    }
+  ]
+}

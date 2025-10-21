@@ -30,7 +30,7 @@ export function Method() {
   ];
 
   return (
-    <section id="metodo" className="section-container bg-white overflow-hidden">
+    <section id="metodo" className="section-container bg-white overflow-hidden" aria-labelledby="method-heading">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-[#521A1F] mb-6 text-center">
           Nuestro Método: La Ruta hacia el Éxito
