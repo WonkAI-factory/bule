@@ -35,7 +35,7 @@ declare global {
   }
 }
 
-const SITE_KEY = '6LcJ-O0rAAAAAIq3IdPWrrvTtRC16PSARSmLlfmF';
+const SITE_KEY = '6Ld5HvIrAAAAAIbYn3OPNHbcLUpd0nFUaRIDV8MN';
 const WEBAPP_URL = 'https://rapid-bread-0675.wonkai-factory.workers.dev';
 const NONCE_ENDPOINT = `${WEBAPP_URL}?action=nonce`;
 
