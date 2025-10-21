@@ -6,7 +6,7 @@ export function CTASection() {
   };
 
   return (
-    <section className="section-container bg-gradient-to-r from-[#4A2329] to-[#A65656] text-white text-center overflow-hidden">
+    <section className="section-container bg-gradient-to-r from-[#521A1F] to-[#6B2026] text-white text-center overflow-hidden">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold mb-6">
           ¿Listo para llevar tu militancia al dominio digital?
@@ -17,7 +17,7 @@ export function CTASection() {
         <Button
           size="lg"
           onClick={scrollToContact}
-          className="bg-white text-[#4A2329] hover:bg-gray-100 text-lg px-10 py-6 rounded-lg shadow-xl transform transition hover:scale-105"
+          className="bg-[#F6F2E9] text-[#521A1F] hover:bg-gray-100 text-lg px-10 py-6 rounded-lg shadow-xl transform transition hover:scale-105"
         >
           SOLICITAR ASESORÍA CONFIDENCIAL
         </Button>
